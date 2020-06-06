@@ -5,7 +5,9 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/styles.css'
-import ProductList from './components/ProductList.jsx'
+// import ProductList from './components/ProductList.jsx'
+import ProductList from './components/ProductList-Hook.jsx'
+
 
 
 ReactDOM.render(
