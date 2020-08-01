@@ -17,9 +17,13 @@ const ProductList = (props) => {
        console.log(newItem)
     },[newItem]);
 
+    // below effect works same as component did mount
     useEffect(() => {
-        console.log(products)
-    }, [products]);
+        console.log('mounted');
+
+        return () => { console.log('Component Unmounted');
+         };
+    }, []);
 
     
     const addItem = () => {

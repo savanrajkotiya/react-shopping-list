@@ -6,17 +6,20 @@ import '../assets/productList.css'
 class ProductList extends Component {
     state = { 
         header: 'Shopping List App',
-        newItem:'',
-        products: productsList
+        newItem: '',
+        products: productsList,
+       
     }
-
-    constructor(state) {
+    constructor(state,props) {
         super();
+       
     }
+   
     render() {
         return (
             <div className="shopping-list"> 
-                <h1>{this.state.header}</h1>
+                
+               <h1>{this.state.header}</h1>
                 <input type="text" placeholder="add new item.." value={this.state.newItem}  onChange={e => this.setState({ newItem: e.target.value })} />
                 <button
                     className={'btn btn-primary'} disabled={this.state.newItem === ''} onClick={this.addItem}>Add Item</button>
@@ -29,7 +32,7 @@ class ProductList extends Component {
     } 
 
     componentDidMount() {
-        console.log('Did Mount');
+        console.log('Did Mount',this.props);
         
     }
       
